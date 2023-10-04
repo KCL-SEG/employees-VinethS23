@@ -2,7 +2,7 @@
 """ENTER YOUR SOLUTION HERE!"""
 
 class Employee:
-    def __init__(self, name):
+    def __init__(self, name, commission):
         self.name = name
         self.contractType = ""
         self.commission = False
@@ -12,7 +12,14 @@ class Employee:
 
     def __str__(self):
         return self.name
-
+    
+class salaryEmployee(Employee):
+    def __init__(self, name, commission):
+        super().__init__(name, commission)
+    
+class hourlyEmployee(Employee):
+    def __init__(self, name, commission):
+        super().__init__(name, commission)
 
 # Billie works on a monthly salary of 4000.  Their total pay is 4000.
 billie = Employee('Billie')
