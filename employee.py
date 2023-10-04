@@ -4,7 +4,9 @@
 class Employee:
     def __init__(self, name):
         self.name = name
-
+        self.contractType = ""
+        self.commission = False
+        
     def get_pay(self):
         pass
 
