@@ -39,9 +39,9 @@ class Employee:
         if self.commission == None:
             pass
         elif self.commission.commissionType == "Contractly":
-            printString = printString + " and receives a commission for " + str(self.commission.contracts) + " contract(s) at " + str(self.commission.commission) + "/contract."
+            printString = printString + " and receives a commission for " + str(self.commission.contracts) + " contract(s) at " + str(self.commission.commission) + "/contract"
         elif self.commission.commissionType == "Bonus":
-            printString = printString + " and receives a bonus commission of " + str(self.commission.bonus)
+            printString = printString + " and receives a bonus commission of " + str(self.commission.commission)
 
         printString += ". Their total pay is " + str(self.get_pay()) + "."
         print(printString)
@@ -103,7 +103,7 @@ class BonusCommission(Commission):
 # Billie works on a monthly salary of 4000.  Their total pay is 4000.
 billie = Employee('Billie', MonthlyContract(4000), None)
 billie.get_pay()
-billie.__str__()
+
 
 # Charlie works on a contract of 100 hours at 25/hour.  Their total pay is 2500.
 charlie = Employee('Charlie', HourlyContract(25, 100), None)
@@ -124,4 +124,8 @@ robbie.get_pay()
 # Ariel works on a contract of 120 hours at 30/hour and receives a bonus commission of 600.  Their total pay is 4200.
 ariel = Employee('Ariel', HourlyContract(30, 120), BonusCommission(600))
 ariel.get_pay()
-billie.__str__()
+
+renee.__str__()
+jan.__str__()
+robbie.__str__()
+ariel.__str__()
